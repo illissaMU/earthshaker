@@ -17,8 +17,30 @@
  */
 package se.kth.news.play;
 
+import se.sics.ktoolbox.util.network.KAddress;
+
 /**
  * @author Alex Ormenisan <aaor@kth.se>
  */
 public class Ping {
+
+    private KAddress selfAdr;
+    private int TTL;
+
+    public Ping(KAddress selfAdr, int TTL) {
+        this.selfAdr = selfAdr;
+        this.TTL = TTL;
+    }
+
+    public KAddress getSelfAdr() {
+        return selfAdr;
+    }
+
+    public int getTTL() {
+        return TTL;
+    }
+
+    public void setTTL(int TTL) {
+        this.TTL = TTL;
+    }
 }

@@ -22,5 +22,5 @@ package se.kth.news.play;
  * @author Alex Ormenisan <aaor@kth.se>
  */
 public class Pong {
-    
+
 }

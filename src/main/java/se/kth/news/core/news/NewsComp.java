@@ -54,6 +54,7 @@ import se.sics.ktoolbox.util.overlays.view.OverlayViewUpdatePort;
 public class NewsComp extends ComponentDefinition {
 
     private static final Logger LOG = LoggerFactory.getLogger(NewsComp.class);
+    private static final int DEFAULT_TTL = 10;
     private String logPrefix = " ";
 
     //*******************************CONNECTIONS********************************
@@ -68,6 +69,7 @@ public class NewsComp extends ComponentDefinition {
     private Identifier gradientOId;
     //*******************************INTERNAL_STATE*****************************
     private NewsView localNewsView;
+    private CroupierSample<NewsView> myCroupierSample;
 
     public NewsComp(Init init) {
         selfAdr = init.selfAdr;
@@ -101,13 +103,14 @@ public class NewsComp extends ComponentDefinition {
     Handler handleCroupierSample = new Handler<CroupierSample<NewsView>>() {
         @Override
         public void handle(CroupierSample<NewsView> castSample) {
+            myCroupierSample = castSample;
             if (castSample.publicSample.isEmpty()) {
                 return;
             }
             Iterator<Identifier> it = castSample.publicSample.keySet().iterator();
             KAddress partner = castSample.publicSample.get(it.next()).getSource();
             KHeader header = new BasicHeader(selfAdr, partner, Transport.UDP);
-            KContentMsg msg = new BasicContentMsg(header, new Ping());
+            KContentMsg msg = new BasicContentMsg(header, new Ping(selfAdr, DEFAULT_TTL));
             trigger(msg, networkPort);
         }
     };
@@ -127,21 +130,33 @@ public class NewsComp extends ComponentDefinition {
     ClassMatchedHandler handlePing
             = new ClassMatchedHandler<Ping, KContentMsg<?, ?, Ping>>() {
 
-                @Override
-                public void handle(Ping content, KContentMsg<?, ?, Ping> container) {
-                    LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
-                    trigger(container.answer(new Pong()), networkPort);
-                }
-            };
+        @Override
+        public void handle(Ping content, KContentMsg<?, ?, Ping> container) {
+            content.setTTL(content.getTTL() - 1);
+            System.out.println("TTL: " + content.getTTL());
+
+            Iterator<Identifier> it = myCroupierSample.publicSample.keySet().iterator();
+
+            if (content.getTTL() > 0 && it.hasNext()) {
+                KAddress partner = myCroupierSample.publicSample.get(it.next()).getSource();
+                KHeader header = new BasicHeader(selfAdr, partner, Transport.UDP);
+                KContentMsg msg = new BasicContentMsg(header, content);
+                trigger(msg, networkPort);
+            }
+
+            LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
+            trigger(container.answer(new Pong()), networkPort);
+        }
+    };
 
     ClassMatchedHandler handlePong
             = new ClassMatchedHandler<Pong, KContentMsg<?, KHeader<?>, Pong>>() {
 
-                @Override
-                public void handle(Pong content, KContentMsg<?, KHeader<?>, Pong> container) {
-                    LOG.info("{}received pong from:{}", logPrefix, container.getHeader().getSource());
-                }
-            };
+        @Override
+        public void handle(Pong content, KContentMsg<?, KHeader<?>, Pong> container) {
+            LOG.info("{}received pong from:{}", logPrefix, container.getHeader().getSource());
+        }
+    };
 
     public static class Init extends se.sics.kompics.Init<NewsComp> {
 
