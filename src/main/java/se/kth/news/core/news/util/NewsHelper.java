@@ -26,7 +26,7 @@ public class NewsHelper {
     public static ArrayList<String> doneNodes = new ArrayList<String>();
     public static ArrayList<String> newsCoverage = new ArrayList<String>();
     public static Map<Identifier, Integer> nodeKnowledge = new HashMap<>();//for each node (defined by id), stores how many news it has received
-    
+
     public static int getTotalOfNews() {
         return totalOfNews;
     }
