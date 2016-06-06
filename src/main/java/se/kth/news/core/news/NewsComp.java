@@ -163,13 +163,19 @@ public class NewsComp extends ComponentDefinition {
                 NewsHelper.nodeKnowledge.put(selfAdr.getId(), NewsHelper.nodeKnowledge.get(selfAdr.getId()) + 1);
             }
 
-            Iterator iter = NewsHelper.nodeKnowledge.entrySet().iterator();
+            Iterator iter1 = NewsHelper.nodeKnowledge.entrySet().iterator();
             int sumOfNews = 0;
-            while (iter.hasNext()) {
-                Map.Entry mEntry = (Map.Entry) iter.next();
-                System.out.println(mEntry.getKey() + " : " + mEntry.getValue());
+            while(iter1.hasNext()){
+                Map.Entry mEntry = (Map.Entry) iter1.next();
                 sumOfNews += (int) mEntry.getValue();
-                System.out.println("Node " + mEntry.getKey() + " has seen " + (100 * (((int) mEntry.getValue())) / sumOfNews) + "% of news");
+            }
+            Iterator iter2 = NewsHelper.nodeKnowledge.entrySet().iterator();
+            while (iter2.hasNext()) {
+                Map.Entry mEntry = (Map.Entry) iter2.next();                
+                //Map.Entry mEntry = (Map.Entry) iter.next();
+                System.out.println(mEntry.getKey() + " : " + mEntry.getValue());
+                //sumOfNews += (int) mEntry.getValue();
+                System.out.println("Node " + mEntry.getKey() + " has seen " + (10000 * (((int) mEntry.getValue())) / sumOfNews) + "‱ of news");
             }
             System.out.println("sum:" + sumOfNews);
             LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
