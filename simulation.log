@@ -1,0 +1,508 @@
+[00:00:02,000] INFO  {HostMngrComp} <nid:1>initiating...
+[00:00:02,000] INFO  {HostMngrComp} <nid:1>starting...
+[00:00:02,000] INFO  {LeaderSelectComp} <nid:1>initiating...
+[00:00:02,000] INFO  {LeaderSelectComp} <nid:1>starting...
+[00:00:02,000] WARN  {GradientComp} <nid:1,oid:12000001> no self view
+[00:00:03,065] INFO  {HostMngrComp} <nid:2>initiating...
+[00:00:03,065] INFO  {HostMngrComp} <nid:2>starting...
+[00:00:03,065] INFO  {LeaderSelectComp} <nid:2>initiating...
+[00:00:03,065] INFO  {LeaderSelectComp} <nid:2>starting...
+[00:00:03,065] WARN  {GradientComp} <nid:2,oid:12000001> no self view
+[00:00:04,000] WARN  {CroupierComp} <nid:1,oid:11000001> no partners - not shuffling
+[00:00:04,000] WARN  {GradientComp} <nid:1,oid:12000001> no partners - not shuffling
+[00:00:04,000] WARN  {TreeGradientComp} <nid:1,oid:13000001> no partners - not shuffling
+[00:00:04,160] INFO  {HostMngrComp} <nid:3>initiating...
+[00:00:04,160] INFO  {HostMngrComp} <nid:3>starting...
+[00:00:04,160] INFO  {LeaderSelectComp} <nid:3>initiating...
+[00:00:04,160] INFO  {LeaderSelectComp} <nid:3>starting...
+[00:00:04,160] WARN  {GradientComp} <nid:3,oid:12000001> no self view
+[00:00:05,065] WARN  {CroupierComp} <nid:2,oid:11000001> no neighbours
+[00:00:05,065] WARN  {GradientComp} <nid:2,oid:12000001> no partners - not shuffling
+[00:00:05,065] WARN  {TreeGradientComp} <nid:2,oid:13000001> no partners - not shuffling
+[00:00:05,246] INFO  {HostMngrComp} <nid:4>initiating...
+[00:00:05,246] INFO  {HostMngrComp} <nid:4>starting...
+[00:00:05,246] INFO  {LeaderSelectComp} <nid:4>initiating...
+[00:00:05,246] INFO  {LeaderSelectComp} <nid:4>starting...
+[00:00:05,246] WARN  {GradientComp} <nid:4,oid:12000001> no self view
+[00:00:06,000] WARN  {GradientComp} <nid:1,oid:12000001> no partners - not shuffling
+[00:00:06,000] WARN  {TreeGradientComp} <nid:1,oid:13000001> no partners - not shuffling
+[00:00:06,000] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:06,160] WARN  {CroupierComp} <nid:3,oid:11000001> no neighbours
+[00:00:06,160] WARN  {GradientComp} <nid:3,oid:12000001> no partners - not shuffling
+[00:00:06,160] WARN  {TreeGradientComp} <nid:3,oid:13000001> no partners - not shuffling
+[00:00:06,292] INFO  {HostMngrComp} <nid:5>initiating...
+[00:00:06,292] INFO  {HostMngrComp} <nid:5>starting...
+[00:00:06,292] INFO  {LeaderSelectComp} <nid:5>initiating...
+[00:00:06,292] INFO  {LeaderSelectComp} <nid:5>starting...
+[00:00:06,292] WARN  {GradientComp} <nid:5,oid:12000001> no self view
+[00:00:07,065] WARN  {GradientComp} <nid:2,oid:12000001> no partners - not shuffling
+[00:00:07,065] WARN  {TreeGradientComp} <nid:2,oid:13000001> no partners - not shuffling
+[00:00:07,065] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:07,065] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:07,246] WARN  {CroupierComp} <nid:4,oid:11000001> no neighbours
+[00:00:07,246] WARN  {GradientComp} <nid:4,oid:12000001> no partners - not shuffling
+[00:00:07,246] WARN  {TreeGradientComp} <nid:4,oid:13000001> no partners - not shuffling
+[00:00:07,326] INFO  {HostMngrComp} <nid:6>initiating...
+[00:00:07,326] INFO  {HostMngrComp} <nid:6>starting...
+[00:00:07,326] INFO  {LeaderSelectComp} <nid:6>initiating...
+[00:00:07,326] INFO  {LeaderSelectComp} <nid:6>starting...
+[00:00:07,326] WARN  {GradientComp} <nid:6,oid:12000001> no self view
+[00:00:08,000] WARN  {TreeGradientComp} <nid:1,oid:13000001> no rank yet
+[00:00:08,160] WARN  {GradientComp} <nid:3,oid:12000001> no partners - not shuffling
+[00:00:08,160] WARN  {TreeGradientComp} <nid:3,oid:13000001> no partners - not shuffling
+[00:00:08,160] INFO  {NewsComp} <nid:1>received ping from:193.0.0.3:12345<3>
+[00:00:08,160] INFO  {NewsComp} <nid:2>received ping from:193.0.0.3:12345<3>
+[00:00:08,160] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:08,160] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:08,160] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:08,160] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:08,292] WARN  {CroupierComp} <nid:5,oid:11000001> no neighbours
+[00:00:08,292] WARN  {GradientComp} <nid:5,oid:12000001> no partners - not shuffling
+[00:00:08,292] WARN  {TreeGradientComp} <nid:5,oid:13000001> no partners - not shuffling
+[00:00:08,346] INFO  {HostMngrComp} <nid:7>initiating...
+[00:00:08,346] INFO  {HostMngrComp} <nid:7>starting...
+[00:00:08,346] INFO  {LeaderSelectComp} <nid:7>initiating...
+[00:00:08,346] INFO  {LeaderSelectComp} <nid:7>starting...
+[00:00:08,346] WARN  {GradientComp} <nid:7,oid:12000001> no self view
+[00:00:09,065] WARN  {TreeGradientComp} <nid:2,oid:13000001> no rank yet
+[00:00:09,246] WARN  {GradientComp} <nid:4,oid:12000001> no partners - not shuffling
+[00:00:09,246] WARN  {TreeGradientComp} <nid:4,oid:13000001> no partners - not shuffling
+[00:00:09,246] INFO  {NewsComp} <nid:1>received ping from:193.0.0.4:12345<4>
+[00:00:09,246] INFO  {NewsComp} <nid:2>received ping from:193.0.0.4:12345<4>
+[00:00:09,246] INFO  {NewsComp} <nid:3>received ping from:193.0.0.4:12345<4>
+[00:00:09,246] INFO  {NewsComp} <nid:5>received ping from:193.0.0.4:12345<4>
+[00:00:09,246] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:09,246] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:09,246] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:09,246] INFO  {NewsComp} <nid:2>received ping from:193.0.0.3:12345<3>
+[00:00:09,246] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:09,246] INFO  {NewsComp} <nid:1>received ping from:193.0.0.3:12345<3>
+[00:00:09,246] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:09,246] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:09,246] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:09,246] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:09,246] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:09,326] WARN  {CroupierComp} <nid:6,oid:11000001> no neighbours
+[00:00:09,326] WARN  {GradientComp} <nid:6,oid:12000001> no partners - not shuffling
+[00:00:09,326] WARN  {TreeGradientComp} <nid:6,oid:13000001> no partners - not shuffling
+[00:00:09,381] INFO  {HostMngrComp} <nid:8>initiating...
+[00:00:09,381] INFO  {HostMngrComp} <nid:8>starting...
+[00:00:09,381] INFO  {LeaderSelectComp} <nid:8>initiating...
+[00:00:09,381] INFO  {LeaderSelectComp} <nid:8>starting...
+[00:00:09,381] WARN  {GradientComp} <nid:8,oid:12000001> no self view
+[00:00:10,000] WARN  {TreeGradientComp} <nid:1,oid:13000001> no rank yet
+[00:00:10,160] WARN  {TreeGradientComp} <nid:3,oid:13000001> no rank yet
+[00:00:10,292] WARN  {GradientComp} <nid:5,oid:12000001> no partners - not shuffling
+[00:00:10,292] WARN  {TreeGradientComp} <nid:5,oid:13000001> no partners - not shuffling
+[00:00:10,292] INFO  {NewsComp} <nid:1>received ping from:193.0.0.5:12345<5>
+[00:00:10,292] INFO  {NewsComp} <nid:2>received ping from:193.0.0.5:12345<5>
+[00:00:10,292] INFO  {NewsComp} <nid:3>received ping from:193.0.0.5:12345<5>
+[00:00:10,292] INFO  {NewsComp} <nid:4>received ping from:193.0.0.5:12345<5>
+[00:00:10,292] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:10,292] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:10,292] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:10,292] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:10,292] INFO  {NewsComp} <nid:2>received ping from:193.0.0.3:12345<3>
+[00:00:10,292] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:10,292] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:10,292] INFO  {NewsComp} <nid:1>received ping from:193.0.0.3:12345<3>
+[00:00:10,292] INFO  {NewsComp} <nid:2>received ping from:193.0.0.4:12345<4>
+[00:00:10,292] INFO  {NewsComp} <nid:3>received ping from:193.0.0.4:12345<4>
+[00:00:10,292] INFO  {NewsComp} <nid:4>received ping from:193.0.0.3:12345<3>
+[00:00:10,292] INFO  {NewsComp} <nid:1>received ping from:193.0.0.4:12345<4>
+[00:00:10,292] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:10,292] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:10,292] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:10,292] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:10,292] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:10,292] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:10,292] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:10,292] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:10,292] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:10,346] WARN  {CroupierComp} <nid:7,oid:11000001> no neighbours
+[00:00:10,346] WARN  {GradientComp} <nid:7,oid:12000001> no partners - not shuffling
+[00:00:10,346] WARN  {TreeGradientComp} <nid:7,oid:13000001> no partners - not shuffling
+[00:00:10,443] INFO  {HostMngrComp} <nid:9>initiating...
+[00:00:10,443] INFO  {HostMngrComp} <nid:9>starting...
+[00:00:10,443] INFO  {LeaderSelectComp} <nid:9>initiating...
+[00:00:10,443] INFO  {LeaderSelectComp} <nid:9>starting...
+[00:00:10,443] WARN  {GradientComp} <nid:9,oid:12000001> no self view
+[00:00:11,065] WARN  {TreeGradientComp} <nid:2,oid:13000001> no rank yet
+[00:00:11,246] WARN  {TreeGradientComp} <nid:4,oid:13000001> no rank yet
+[00:00:11,326] WARN  {GradientComp} <nid:6,oid:12000001> no partners - not shuffling
+[00:00:11,326] WARN  {TreeGradientComp} <nid:6,oid:13000001> no partners - not shuffling
+[00:00:11,326] INFO  {NewsComp} <nid:1>received ping from:193.0.0.6:12345<6>
+[00:00:11,326] INFO  {NewsComp} <nid:2>received ping from:193.0.0.6:12345<6>
+[00:00:11,326] INFO  {NewsComp} <nid:3>received ping from:193.0.0.6:12345<6>
+[00:00:11,326] INFO  {NewsComp} <nid:4>received ping from:193.0.0.6:12345<6>
+[00:00:11,326] INFO  {NewsComp} <nid:5>received ping from:193.0.0.6:12345<6>
+[00:00:11,326] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:11,326] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:11,326] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:11,326] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:11,326] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:7>received ping from:193.0.0.4:12345<4>
+[00:00:11,326] INFO  {NewsComp} <nid:2>received ping from:193.0.0.3:12345<3>
+[00:00:11,326] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:5>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:1>received ping from:193.0.0.3:12345<3>
+[00:00:11,326] INFO  {NewsComp} <nid:2>received ping from:193.0.0.4:12345<4>
+[00:00:11,326] INFO  {NewsComp} <nid:3>received ping from:193.0.0.4:12345<4>
+[00:00:11,326] INFO  {NewsComp} <nid:4>received ping from:193.0.0.3:12345<3>
+[00:00:11,326] INFO  {NewsComp} <nid:5>received ping from:193.0.0.4:12345<4>
+[00:00:11,326] INFO  {NewsComp} <nid:1>received ping from:193.0.0.4:12345<4>
+[00:00:11,326] INFO  {NewsComp} <nid:2>received ping from:193.0.0.5:12345<5>
+[00:00:11,326] INFO  {NewsComp} <nid:3>received ping from:193.0.0.5:12345<5>
+[00:00:11,326] INFO  {NewsComp} <nid:4>received ping from:193.0.0.5:12345<5>
+[00:00:11,326] INFO  {NewsComp} <nid:1>received ping from:193.0.0.5:12345<5>
+[00:00:11,326] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:5>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:11,326] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:11,326] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:11,326] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:5>received ping from:193.0.0.2:12345<2>
+[00:00:11,326] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:11,381] WARN  {CroupierComp} <nid:8,oid:11000001> no neighbours
+[00:00:11,381] WARN  {GradientComp} <nid:8,oid:12000001> no partners - not shuffling
+[00:00:11,381] WARN  {TreeGradientComp} <nid:8,oid:13000001> no partners - not shuffling
+[00:00:11,538] INFO  {HostMngrComp} <nid:10>initiating...
+[00:00:11,538] INFO  {HostMngrComp} <nid:10>starting...
+[00:00:11,538] INFO  {LeaderSelectComp} <nid:10>initiating...
+[00:00:11,538] INFO  {LeaderSelectComp} <nid:10>starting...
+[00:00:11,538] WARN  {GradientComp} <nid:10,oid:12000001> no self view
+[00:00:12,000] WARN  {TreeGradientComp} <nid:1,oid:13000001> no rank yet
+[00:00:12,160] DEBUG {LeaderSelectComp} <nid:3>neighbours:[<193.0.0.1:12345<1>,0>:rank:2147483647:value:News<1>, <193.0.0.2:12345<2>,0>:rank:2147483647:value:News<2>]
+[00:00:12,160] DEBUG {LeaderSelectComp} <nid:3>fingers:[<193.0.0.1:12345<1>,0>:rank:2147483647:value:News<1>, <193.0.0.2:12345<2>,0>:rank:2147483647:value:News<2>, <193.0.0.4:12345<4>,0>:rank:2147483647:value:News<4>]
+[00:00:12,160] DEBUG {LeaderSelectComp} <nid:3>local view:News<3>
+[00:00:12,292] WARN  {TreeGradientComp} <nid:5,oid:13000001> no rank yet
+[00:00:12,346] WARN  {GradientComp} <nid:7,oid:12000001> no partners - not shuffling
+[00:00:12,346] WARN  {TreeGradientComp} <nid:7,oid:13000001> no partners - not shuffling
+[00:00:12,346] INFO  {NewsComp} <nid:1>received ping from:193.0.0.7:12345<7>
+[00:00:12,346] INFO  {NewsComp} <nid:2>received ping from:193.0.0.7:12345<7>
+[00:00:12,346] INFO  {NewsComp} <nid:3>received ping from:193.0.0.7:12345<7>
+[00:00:12,346] INFO  {NewsComp} <nid:4>received ping from:193.0.0.7:12345<7>
+[00:00:12,346] INFO  {NewsComp} <nid:5>received ping from:193.0.0.7:12345<7>
+[00:00:12,346] INFO  {NewsComp} <nid:6>received ping from:193.0.0.7:12345<7>
+[00:00:12,346] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:12,346] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:12,346] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:12,346] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:12,346] INFO  {NewsComp} <nid:6>received ping from:193.0.0.1:12345<1>
+[00:00:12,346] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:2>received ping from:193.0.0.3:12345<3>
+[00:00:12,346] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:5>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:6>received ping from:193.0.0.3:12345<3>
+[00:00:12,346] INFO  {NewsComp} <nid:1>received ping from:193.0.0.3:12345<3>
+[00:00:12,346] INFO  {NewsComp} <nid:2>received ping from:193.0.0.4:12345<4>
+[00:00:12,346] INFO  {NewsComp} <nid:3>received ping from:193.0.0.4:12345<4>
+[00:00:12,346] INFO  {NewsComp} <nid:4>received ping from:193.0.0.3:12345<3>
+[00:00:12,346] INFO  {NewsComp} <nid:5>received ping from:193.0.0.3:12345<3>
+[00:00:12,346] INFO  {NewsComp} <nid:6>received ping from:193.0.0.4:12345<4>
+[00:00:12,346] INFO  {NewsComp} <nid:1>received ping from:193.0.0.4:12345<4>
+[00:00:12,346] INFO  {NewsComp} <nid:2>received ping from:193.0.0.5:12345<5>
+[00:00:12,346] INFO  {NewsComp} <nid:3>received ping from:193.0.0.5:12345<5>
+[00:00:12,346] INFO  {NewsComp} <nid:4>received ping from:193.0.0.5:12345<5>
+[00:00:12,346] INFO  {NewsComp} <nid:5>received ping from:193.0.0.4:12345<4>
+[00:00:12,346] INFO  {NewsComp} <nid:1>received ping from:193.0.0.5:12345<5>
+[00:00:12,346] INFO  {NewsComp} <nid:2>received ping from:193.0.0.6:12345<6>
+[00:00:12,346] INFO  {NewsComp} <nid:3>received ping from:193.0.0.6:12345<6>
+[00:00:12,346] INFO  {NewsComp} <nid:4>received ping from:193.0.0.6:12345<6>
+[00:00:12,346] INFO  {NewsComp} <nid:5>received ping from:193.0.0.6:12345<6>
+[00:00:12,346] INFO  {NewsComp} <nid:1>received ping from:193.0.0.6:12345<6>
+[00:00:12,346] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:5>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:6>received ping from:193.0.0.1:12345<1>
+[00:00:12,346] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:12,346] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:12,346] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:12,346] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:5>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:5>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:12,346] INFO  {NewsComp} <nid:5>received ping from:193.0.0.2:12345<2>
+[00:00:12,443] WARN  {CroupierComp} <nid:9,oid:11000001> no neighbours
+[00:00:12,443] WARN  {GradientComp} <nid:9,oid:12000001> no partners - not shuffling
+[00:00:12,443] WARN  {TreeGradientComp} <nid:9,oid:13000001> no partners - not shuffling
+[00:00:13,065] WARN  {TreeGradientComp} <nid:2,oid:13000001> no rank yet
+[00:00:13,246] WARN  {TreeGradientComp} <nid:4,oid:13000001> no rank yet
+[00:00:13,326] WARN  {TreeGradientComp} <nid:6,oid:13000001> no rank yet
+[00:00:13,381] WARN  {GradientComp} <nid:8,oid:12000001> no partners - not shuffling
+[00:00:13,381] WARN  {TreeGradientComp} <nid:8,oid:13000001> no partners - not shuffling
+[00:00:13,381] INFO  {NewsComp} <nid:7>received ping from:193.0.0.8:12345<8>
+[00:00:13,381] INFO  {NewsComp} <nid:1>received ping from:193.0.0.8:12345<8>
+[00:00:13,381] INFO  {NewsComp} <nid:2>received ping from:193.0.0.8:12345<8>
+[00:00:13,381] INFO  {NewsComp} <nid:4>received ping from:193.0.0.8:12345<8>
+[00:00:13,381] INFO  {NewsComp} <nid:5>received ping from:193.0.0.8:12345<8>
+[00:00:13,381] INFO  {NewsComp} <nid:6>received ping from:193.0.0.8:12345<8>
+[00:00:13,381] INFO  {NewsComp} <nid:1>received ping from:193.0.0.7:12345<7>
+[00:00:13,381] INFO  {NewsComp} <nid:2>received ping from:193.0.0.7:12345<7>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.7:12345<7>
+[00:00:13,381] INFO  {NewsComp} <nid:4>received ping from:193.0.0.7:12345<7>
+[00:00:13,381] INFO  {NewsComp} <nid:5>received ping from:193.0.0.7:12345<7>
+[00:00:13,381] INFO  {NewsComp} <nid:6>received ping from:193.0.0.7:12345<7>
+[00:00:13,381] INFO  {NewsComp} <nid:7>received ping from:193.0.0.4:12345<4>
+[00:00:13,381] INFO  {NewsComp} <nid:9>received ping from:193.0.0.4:12345<4>
+[00:00:13,381] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:13,381] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:6>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:1>received ping from:193.0.0.4:12345<4>
+[00:00:13,381] INFO  {NewsComp} <nid:2>received ping from:193.0.0.4:12345<4>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:13,381] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:13,381] INFO  {NewsComp} <nid:5>received ping from:193.0.0.2:12345<2>
+[00:00:13,381] INFO  {NewsComp} <nid:6>received ping from:193.0.0.2:12345<2>
+[00:00:13,381] INFO  {NewsComp} <nid:1>received ping from:193.0.0.5:12345<5>
+[00:00:13,381] INFO  {NewsComp} <nid:2>received ping from:193.0.0.5:12345<5>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.4:12345<4>
+[00:00:13,381] INFO  {NewsComp} <nid:4>received ping from:193.0.0.5:12345<5>
+[00:00:13,381] INFO  {NewsComp} <nid:5>received ping from:193.0.0.4:12345<4>
+[00:00:13,381] INFO  {NewsComp} <nid:6>received ping from:193.0.0.4:12345<4>
+[00:00:13,381] INFO  {NewsComp} <nid:1>received ping from:193.0.0.6:12345<6>
+[00:00:13,381] INFO  {NewsComp} <nid:2>received ping from:193.0.0.6:12345<6>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.5:12345<5>
+[00:00:13,381] INFO  {NewsComp} <nid:4>received ping from:193.0.0.6:12345<6>
+[00:00:13,381] INFO  {NewsComp} <nid:5>received ping from:193.0.0.6:12345<6>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.6:12345<6>
+[00:00:13,381] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:6>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:1>received ping from:193.0.0.7:12345<7>
+[00:00:13,381] INFO  {NewsComp} <nid:2>received ping from:193.0.0.7:12345<7>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.7:12345<7>
+[00:00:13,381] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:5>received ping from:193.0.0.7:12345<7>
+[00:00:13,381] INFO  {NewsComp} <nid:6>received ping from:193.0.0.7:12345<7>
+[00:00:13,381] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:13,381] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:6>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:13,381] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:5>received ping from:193.0.0.2:12345<2>
+[00:00:13,381] INFO  {NewsComp} <nid:6>received ping from:193.0.0.2:12345<2>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:6>received ping from:193.0.0.1:12345<1>
+[00:00:13,381] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:13,538] WARN  {CroupierComp} <nid:10,oid:11000001> no neighbours
+[00:00:13,538] WARN  {GradientComp} <nid:10,oid:12000001> no partners - not shuffling
+[00:00:13,538] WARN  {TreeGradientComp} <nid:10,oid:13000001> no partners - not shuffling
+[00:00:14,000] DEBUG {LeaderSelectComp} <nid:1>neighbours:[<193.0.0.2:12345<2>,1>:rank:2147483647:value:News<2>, <193.0.0.3:12345<3>,0>:rank:0:value:News<3>, <193.0.0.4:12345<4>,1>:rank:2147483647:value:News<4>, <193.0.0.5:12345<5>,2>:rank:2147483647:value:News<5>]
+[00:00:14,000] DEBUG {LeaderSelectComp} <nid:1>fingers:[<193.0.0.2:12345<2>,0>:rank:2147483647:value:News<2>, <193.0.0.3:12345<3>,0>:rank:2147483647:value:News<3>, <193.0.0.4:12345<4>,0>:rank:2147483647:value:News<4>, <193.0.0.5:12345<5>,1>:rank:2147483647:value:News<5>, <193.0.0.6:12345<6>,0>:rank:2147483647:value:News<6>]
+[00:00:14,000] DEBUG {LeaderSelectComp} <nid:1>local view:News<1>
+[00:00:14,160] DEBUG {LeaderSelectComp} <nid:3>neighbours:[<193.0.0.1:12345<1>,1>:rank:2147483647:value:News<1>, <193.0.0.2:12345<2>,1>:rank:2147483647:value:News<2>, <193.0.0.4:12345<4>,1>:rank:2147483647:value:News<4>, <193.0.0.5:12345<5>,3>:rank:2147483647:value:News<5>]
+[00:00:14,160] DEBUG {LeaderSelectComp} <nid:3>fingers:[<193.0.0.7:12345<7>,1>:rank:2147483647:value:News<7>, <193.0.0.1:12345<1>,0>:rank:2147483647:value:News<1>, <193.0.0.2:12345<2>,0>:rank:2147483647:value:News<2>, <193.0.0.4:12345<4>,0>:rank:2147483647:value:News<4>, <193.0.0.5:12345<5>,0>:rank:2147483647:value:News<5>, <193.0.0.6:12345<6>,1>:rank:2147483647:value:News<6>]
+[00:00:14,160] DEBUG {LeaderSelectComp} <nid:3>local view:News<3>
+[00:00:14,292] DEBUG {LeaderSelectComp} <nid:5>neighbours:[<193.0.0.1:12345<1>,1>:rank:2147483647:value:News<1>, <193.0.0.2:12345<2>,1>:rank:2147483647:value:News<2>, <193.0.0.3:12345<3>,1>:rank:0:value:News<3>, <193.0.0.4:12345<4>,1>:rank:2147483647:value:News<4>]
+[00:00:14,292] DEBUG {LeaderSelectComp} <nid:5>fingers:[<193.0.0.1:12345<1>,0>:rank:2:value:News<1>, <193.0.0.2:12345<2>,1>:rank:2147483647:value:News<2>, <193.0.0.3:12345<3>,0>:rank:0:value:News<3>, <193.0.0.4:12345<4>,1>:rank:2147483647:value:News<4>]
+[00:00:14,292] DEBUG {LeaderSelectComp} <nid:5>local view:News<5>
+[00:00:14,346] WARN  {TreeGradientComp} <nid:7,oid:13000001> no rank yet
+[00:00:14,443] WARN  {GradientComp} <nid:9,oid:12000001> no partners - not shuffling
+[00:00:14,443] WARN  {TreeGradientComp} <nid:9,oid:13000001> no partners - not shuffling
+[00:00:14,443] INFO  {NewsComp} <nid:8>received ping from:193.0.0.9:12345<9>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.9:12345<9>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.9:12345<9>
+[00:00:14,443] INFO  {NewsComp} <nid:3>received ping from:193.0.0.9:12345<9>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.9:12345<9>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.9:12345<9>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.9:12345<9>
+[00:00:14,443] INFO  {NewsComp} <nid:7>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:8>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:7>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.2:12345<2>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:8>received ping from:193.0.0.4:12345<4>
+[00:00:14,443] INFO  {NewsComp} <nid:3>received ping from:193.0.0.2:12345<2>
+[00:00:14,443] INFO  {NewsComp} <nid:7>received ping from:193.0.0.3:12345<3>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.3:12345<3>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.3:12345<3>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.2:12345<2>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.2:12345<2>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.2:12345<2>
+[00:00:14,443] INFO  {NewsComp} <nid:8>received ping from:193.0.0.5:12345<5>
+[00:00:14,443] INFO  {NewsComp} <nid:3>received ping from:193.0.0.4:12345<4>
+[00:00:14,443] INFO  {NewsComp} <nid:7>received ping from:193.0.0.4:12345<4>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.4:12345<4>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.4:12345<4>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.3:12345<3>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.3:12345<3>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.3:12345<3>
+[00:00:14,443] INFO  {NewsComp} <nid:3>received ping from:193.0.0.5:12345<5>
+[00:00:14,443] INFO  {NewsComp} <nid:7>received ping from:193.0.0.5:12345<5>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.5:12345<5>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.5:12345<5>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.5:12345<5>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.4:12345<4>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.4:12345<4>
+[00:00:14,443] INFO  {NewsComp} <nid:3>received ping from:193.0.0.6:12345<6>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.6:12345<6>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.6:12345<6>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.6:12345<6>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.6:12345<6>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.5:12345<5>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.7:12345<7>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.7:12345<7>
+[00:00:14,443] INFO  {NewsComp} <nid:3>received ping from:193.0.0.7:12345<7>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.7:12345<7>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.7:12345<7>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.7:12345<7>
+[00:00:14,443] INFO  {NewsComp} <nid:7>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:8>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:7>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.7:12345<7>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.1:12345<1>
+[00:00:14,443] INFO  {NewsComp} <nid:7>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.7:12345<7>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.7:12345<7>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:7>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:1>received ping from:193.0.0.3:12345<3>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.8:12345<8>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.7:12345<7>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.7:12345<7>
+[00:00:14,443] INFO  {NewsComp} <nid:7>received ping from:193.0.0.3:12345<3>
+[00:00:14,443] INFO  {NewsComp} <nid:2>received ping from:193.0.0.3:12345<3>
+[00:00:14,443] INFO  {NewsComp} <nid:4>received ping from:193.0.0.3:12345<3>
+[00:00:14,443] INFO  {NewsComp} <nid:5>received ping from:193.0.0.3:12345<3>
+[00:00:14,443] INFO  {NewsComp} <nid:6>received ping from:193.0.0.8:12345<8>
+[00:00:15,065] DEBUG {LeaderSelectComp} <nid:2>neighbours:[<193.0.0.1:12345<1>,2>:rank:2147483647:value:News<1>, <193.0.0.3:12345<3>,2>:rank:2147483647:value:News<3>, <193.0.0.4:12345<4>,1>:rank:2147483647:value:News<4>, <193.0.0.5:12345<5>,0>:rank:0:value:News<5>]
+[00:00:15,065] DEBUG {LeaderSelectComp} <nid:2>fingers:[<193.0.0.1:12345<1>,1>:rank:2147483647:value:News<1>, <193.0.0.3:12345<3>,1>:rank:0:value:News<3>, <193.0.0.4:12345<4>,1>:rank:2147483647:value:News<4>, <193.0.0.5:12345<5>,0>:rank:0:value:News<5>, <193.0.0.6:12345<6>,2>:rank:2147483647:value:News<6>]
+[00:00:15,065] DEBUG {LeaderSelectComp} <nid:2>local view:News<2>
+[00:00:15,246] WARN  {TreeGradientComp} <nid:4,oid:13000001> no rank yet
+[00:00:15,326] DEBUG {LeaderSelectComp} <nid:6>neighbours:[<193.0.0.1:12345<1>,0>:rank:2147483647:value:News<1>, <193.0.0.2:12345<2>,0>:rank:2147483647:value:News<2>, <193.0.0.3:12345<3>,0>:rank:2147483647:value:News<3>, <193.0.0.4:12345<4>,0>:rank:2147483647:value:News<4>, <193.0.0.5:12345<5>,1>:rank:2147483647:value:News<5>]
+[00:00:15,326] DEBUG {LeaderSelectComp} <nid:6>fingers:[<193.0.0.1:12345<1>,0>:rank:2147483647:value:News<1>, <193.0.0.2:12345<2>,0>:rank:2147483647:value:News<2>, <193.0.0.3:12345<3>,0>:rank:2147483647:value:News<3>, <193.0.0.4:12345<4>,0>:rank:2147483647:value:News<4>, <193.0.0.5:12345<5>,0>:rank:2147483647:value:News<5>]
+[00:00:15,326] DEBUG {LeaderSelectComp} <nid:6>local view:News<6>
+[00:00:15,381] WARN  {TreeGradientComp} <nid:8,oid:13000001> no rank yet
+[00:00:15,538] WARN  {GradientComp} <nid:10,oid:12000001> no partners - not shuffling
+[00:00:15,538] WARN  {TreeGradientComp} <nid:10,oid:13000001> no partners - not shuffling
+[00:00:15,538] INFO  {NewsComp} <nid:8>received ping from:193.0.0.10:12345<10>
+[00:00:15,538] INFO  {NewsComp} <nid:9>received ping from:193.0.0.10:12345<10>
+[00:00:15,538] INFO  {NewsComp} <nid:1>received ping from:193.0.0.10:12345<10>
+[00:00:15,538] INFO  {NewsComp} <nid:3>received ping from:193.0.0.10:12345<10>
+[00:00:15,538] INFO  {NewsComp} <nid:4>received ping from:193.0.0.10:12345<10>
+[00:00:15,538] INFO  {NewsComp} <nid:6>received ping from:193.0.0.10:12345<10>
+[00:00:15,538] INFO  {NewsComp} <nid:7>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:9>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:1>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:3>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:4>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:6>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:8>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:7>received ping from:193.0.0.1:12345<1>
+[00:00:15,538] INFO  {NewsComp} <nid:9>received ping from:193.0.0.4:12345<4>
+[00:00:15,538] INFO  {NewsComp} <nid:1>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:3>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:4>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:6>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:8>received ping from:193.0.0.1:12345<1>
+[00:00:15,538] INFO  {NewsComp} <nid:7>received ping from:193.0.0.3:12345<3>
+[00:00:15,538] INFO  {NewsComp} <nid:1>received ping from:193.0.0.3:12345<3>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.1:12345<1>
+[00:00:15,538] INFO  {NewsComp} <nid:3>received ping from:193.0.0.1:12345<1>
+[00:00:15,538] INFO  {NewsComp} <nid:4>received ping from:193.0.0.1:12345<1>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.1:12345<1>
+[00:00:15,538] INFO  {NewsComp} <nid:6>received ping from:193.0.0.1:12345<1>
+[00:00:15,538] INFO  {NewsComp} <nid:8>received ping from:193.0.0.4:12345<4>
+[00:00:15,538] INFO  {NewsComp} <nid:7>received ping from:193.0.0.4:12345<4>
+[00:00:15,538] INFO  {NewsComp} <nid:1>received ping from:193.0.0.4:12345<4>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.3:12345<3>
+[00:00:15,538] INFO  {NewsComp} <nid:3>received ping from:193.0.0.4:12345<4>
+[00:00:15,538] INFO  {NewsComp} <nid:4>received ping from:193.0.0.3:12345<3>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.3:12345<3>
+[00:00:15,538] INFO  {NewsComp} <nid:6>received ping from:193.0.0.3:12345<3>
+[00:00:15,538] INFO  {NewsComp} <nid:7>received ping from:193.0.0.6:12345<6>
+[00:00:15,538] INFO  {NewsComp} <nid:1>received ping from:193.0.0.6:12345<6>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.4:12345<4>
+[00:00:15,538] INFO  {NewsComp} <nid:3>received ping from:193.0.0.6:12345<6>
+[00:00:15,538] INFO  {NewsComp} <nid:4>received ping from:193.0.0.6:12345<6>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.4:12345<4>
+[00:00:15,538] INFO  {NewsComp} <nid:6>received ping from:193.0.0.4:12345<4>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.6:12345<6>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.6:12345<6>
+[00:00:15,538] INFO  {NewsComp} <nid:1>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:3>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:4>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:6>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:7>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:8>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:1>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:3>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:4>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:6>received ping from:193.0.0.8:12345<8>
+[00:00:15,538] INFO  {NewsComp} <nid:1>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:3>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:4>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:6>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:1>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:3>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:4>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:6>received ping from:193.0.0.9:12345<9>
+[00:00:15,538] INFO  {NewsComp} <nid:1>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:3>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:4>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:6>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:2>received ping from:193.0.0.7:12345<7>
+[00:00:15,538] INFO  {NewsComp} <nid:5>received ping from:193.0.0.7:12345<7>
+[00:00:16,000] DEBUG {LeaderSelectComp} <nid:1>neighbours:[<193.0.0.2:12345<2>,1>:rank:2147483647:value:News<2>, <193.0.0.3:12345<3>,1>:rank:2147483647:value:News<3>, <193.0.0.4:12345<4>,1>:rank:2147483647:value:News<4>, <193.0.0.5:12345<5>,2>:rank:2147483647:value:News<5>, <193.0.0.6:12345<6>,1>:rank:2147483647:value:News<6>]
+[00:00:16,000] DEBUG {LeaderSelectComp} <nid:1>fingers:[<193.0.0.7:12345<7>,1>:rank:2147483647:value:News<7>, <193.0.0.8:12345<8>,0>:rank:2147483647:value:News<8>, <193.0.0.2:12345<2>,1>:rank:2147483647:value:News<2>, <193.0.0.3:12345<3>,0>:rank:0:value:News<3>, <193.0.0.4:12345<4>,0>:rank:2147483647:value:News<4>, <193.0.0.5:12345<5>,0>:rank:2147483647:value:News<5>, <193.0.0.6:12345<6>,0>:rank:2147483647:value:News<6>]
+[00:00:16,000] DEBUG {LeaderSelectComp} <nid:1>local view:News<1>
