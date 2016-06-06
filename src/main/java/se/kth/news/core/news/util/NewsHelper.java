@@ -15,37 +15,30 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-package se.kth.news.play;
+package se.kth.news.core.news.util;
 
-import se.sics.ktoolbox.util.network.KAddress;
+import java.util.ArrayList;
 
-/**
- * @author Alex Ormenisan <aaor@kth.se>
- */
-public class Ping {
+public class NewsHelper {
 
-    private KAddress selfAdr;
-    private int TTL;
+    public static int nbrOfNews;
+    public static ArrayList<String> doneNodes = new ArrayList<String>();
 
-    public Ping(KAddress selfAdr, int TTL) {
-        this.selfAdr = selfAdr;
-        this.TTL = TTL;
+    public static int getNbrOfNews() {
+        return nbrOfNews;
     }
 
-    public KAddress getSelfAdr() {
-        return selfAdr;
+    public static void increaseNbrOfNews() {
+        nbrOfNews++;
     }
 
-     public void decreaseTTL(){
-         this.TTL--;
-     }
-     
-     
-    public int getTTL() {
-        return TTL;
+    public static ArrayList<String> getDoneNodes() {
+        return doneNodes;
     }
 
-    public void setTTL(int TTL) {
-        this.TTL = TTL;
+    public static void addDoneNodes(String doneNodesId) {
+        if (!doneNodes.contains(doneNodesId)) {
+            doneNodes.add(doneNodesId);
+        }
     }
 }
