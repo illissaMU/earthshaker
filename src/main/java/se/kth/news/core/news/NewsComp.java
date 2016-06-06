@@ -19,6 +19,7 @@ package se.kth.news.core.news;
 
 import java.util.Iterator;
 import java.util.Map;
+import java.util.ArrayList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import se.kth.news.core.leader.LeaderSelectPort;
@@ -56,6 +57,7 @@ public class NewsComp extends ComponentDefinition {
     private static final Logger LOG = LoggerFactory.getLogger(NewsComp.class);
     private static final int DEFAULT_TTL = 3;
     private String logPrefix = " ";
+    private  ArrayList<String> donenodes = new ArrayList<String>();
 
     //*******************************CONNECTIONS********************************
     Positive<Timer> timerPort = requires(Timer.class);
@@ -104,9 +106,11 @@ public class NewsComp extends ComponentDefinition {
         @Override
         public void handle(CroupierSample<NewsView> castSample) {
             myCroupierSample = castSample;
-            if (castSample.publicSample.isEmpty()) {
+            if (castSample.publicSample.isEmpty()|| donenodes.contains(selfAdr.getId().toString())) {
+                System.out.println("Done nodes");
                 return;
             }
+            donenodes.add(selfAdr.getId().toString());
             Iterator<Identifier> it = castSample.publicSample.keySet().iterator();
             while ( it.hasNext()) {
             KAddress partner = castSample.publicSample.get(it.next()).getSource();
