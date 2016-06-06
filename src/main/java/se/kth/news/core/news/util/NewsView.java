@@ -25,19 +25,31 @@ import se.sics.ktoolbox.util.update.View;
  * @author Alex Ormenisan <aaor@kth.se>
  */
 public class NewsView implements View {
-    
-    public final int localNewsCount;
+
+    public int localNewsCount;
     public final Identifier nodeId; //view tie breaker
-    
+
     public NewsView(Identifier nodeId, int localNewsCount) {
         this.nodeId = nodeId;
         this.localNewsCount = localNewsCount;
     }
-    
+
+    public Identifier getNodeId() {
+        return nodeId;
+    }
+
     public NewsView copy() {
         return new NewsView(nodeId, localNewsCount);
     }
-    
+
+    public void increaseLocalNewsViewCount() {
+        localNewsCount++;
+    }
+
+    public int getLocalNewsViewCount() {
+        return localNewsCount;
+    }
+
     @Override
     public String toString() {
         return "News<" + nodeId + ">";

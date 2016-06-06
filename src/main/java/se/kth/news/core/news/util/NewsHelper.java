@@ -17,21 +17,22 @@
  */
 package se.kth.news.core.news.util;
 
-import java.util.ArrayList;
+import java.util.*;
+import se.sics.ktoolbox.util.identifiable.Identifier;
 
 public class NewsHelper {
 
-    public static int nbrOfNews;
+    public static int totalOfNews;
     public static ArrayList<String> doneNodes = new ArrayList<String>();
-    public static ArrayList<String> nodescoverage = new ArrayList<String>();
-
-
-    public static int getNbrOfNews() {
-        return nbrOfNews;
+    public static ArrayList<String> newsCoverage = new ArrayList<String>();
+    public static Map<Identifier, Integer> nodeKnowledge = new HashMap<>();//for each node (defined by id), stores how many news it has received
+    
+    public static int getTotalOfNews() {
+        return totalOfNews;
     }
 
-    public static void increaseNbrOfNews() {
-        nbrOfNews++;
+    public static void increaseTotalOfNews() {
+        totalOfNews++;
     }
 
     public static ArrayList<String> getDoneNodes() {

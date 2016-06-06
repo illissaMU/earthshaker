@@ -58,7 +58,7 @@ import se.kth.news.core.news.util.NewsHelper;
 public class NewsComp extends ComponentDefinition {
 
     private static final Logger LOG = LoggerFactory.getLogger(NewsComp.class);
-    private static final int DEFAULT_TTL = 3;
+    private static final int DEFAULT_TTL = 1;
     private static final int NETWORK_SIZE = ScenarioGen.NETWORK_SIZE;//number of nodes
     private String logPrefix = " ";
     //private ArrayList<String> nodescoverage = new ArrayList<String>();
@@ -111,21 +111,24 @@ public class NewsComp extends ComponentDefinition {
         public void handle(CroupierSample<NewsView> castSample) {
             myCroupierSample = castSample;
             //System.out.println("size: " + NewsHelper.getDoneNodes().size());
-            System.out.println("last nodes coverage:" + (NewsHelper.nodescoverage.size()-1));            
+            if (NewsHelper.newsCoverage.size() != 0) {
+                //System.out.println("last nodes coverage:" + (NewsHelper.newsCoverage.size() - 1));
+                System.out.println("*** " + (double) (100 * (NewsHelper.newsCoverage.size() - 1) / NETWORK_SIZE) + "%");
+            }
             if (castSample.publicSample.isEmpty() || (NewsHelper.getDoneNodes().contains(selfAdr.getId().toString()))) {
-                for (String str : NewsHelper.getDoneNodes()) {
+                /*for (String str : NewsHelper.getDoneNodes()) {
                     System.out.println("node id:" + str);
+                }*/
+                //System.out.println("!!!" + (double) (100 * NewsHelper.getDoneNodes().size() / NETWORK_SIZE) + "%");
+                if (NewsHelper.getDoneNodes().size() == NETWORK_SIZE) {
+                    System.exit(0);
                 }
-               //System.out.println("!!!" + (double) (100 * NewsHelper.getDoneNodes().size() / NETWORK_SIZE) + "%");
-                if( NewsHelper.getDoneNodes().size()==NETWORK_SIZE){
-                System.exit(0);
-                }
-               //System.out.println("Done nodes~~~~Node:" + selfAdr.getId().toString());
+                //System.out.println("Done nodes~~~~Node:" + selfAdr.getId().toString());
                 return;
             }
 
-            NewsHelper.nodescoverage.clear();
-            NewsHelper.nodescoverage.add(selfAdr.getId().toString());
+            NewsHelper.newsCoverage.clear();
+            NewsHelper.newsCoverage.add(selfAdr.getId().toString());
             NewsHelper.addDoneNodes(selfAdr.getId().toString());
             //for (String str : NewsHelper.getDoneNodes()) {
             //   System.out.println("str: " + str);
@@ -137,13 +140,14 @@ public class NewsComp extends ComponentDefinition {
                 KHeader header = new BasicHeader(selfAdr, partner, Transport.UDP);
                 KContentMsg msg = new BasicContentMsg(header, new Ping(selfAdr, DEFAULT_TTL));
                 trigger(msg, networkPort);
-                
+                localNewsView.increaseLocalNewsViewCount();
 
                 // System.out.println("!!!" + (double) (100 * NewsHelper.getDoneNodes().size() / NETWORK_SIZE) + "%");
-            } 
-            System.out.println("Done nodes~~~~Node:" + selfAdr.getId().toString());
-            
-             NewsHelper.increaseNbrOfNews();
+            }
+            System.out.println("node " + localNewsView.getNodeId() + " has sent " + localNewsView.getLocalNewsViewCount() + " news");
+            //System.out.println("Done nodes~~~~Node:" + selfAdr.getId().toString());
+
+            NewsHelper.increaseTotalOfNews();
         }
     };
 
@@ -164,12 +168,24 @@ public class NewsComp extends ComponentDefinition {
 
         @Override
         public void handle(Ping content, KContentMsg<?, ?, Ping> container) {
-            System.out.println("TTL: " + content.getTTL());
-            
-           if (!NewsHelper.nodescoverage.contains(selfAdr.getId().toString())) {
-            NewsHelper.nodescoverage.add(selfAdr.getId().toString());
+            //System.out.println("TTL: " + content.getTTL());
+
+            if (!NewsHelper.newsCoverage.contains(selfAdr.getId().toString())) {
+                NewsHelper.newsCoverage.add(selfAdr.getId().toString());
             }
-            
+
+            NewsHelper.nodeKnowledge.putIfAbsent(selfAdr.getId(), 0);
+            if (NewsHelper.nodeKnowledge.containsKey(selfAdr.getId())) {
+                NewsHelper.nodeKnowledge.put(selfAdr.getId(), NewsHelper.nodeKnowledge.get(selfAdr.getId()) + 1);
+            }
+            Iterator iter = NewsHelper.nodeKnowledge.entrySet().iterator();
+
+            while (iter.hasNext()) {
+                Map.Entry mEntry = (Map.Entry) iter.next();
+                System.out.println(mEntry.getKey() + " : " + mEntry.getValue());
+            }
+
+            //System.out.println("map: "+NewsHelper.nodeKnowledge.size());
             LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
             if (content.getTTL() > 1) {
                 content.decreaseTTL();
