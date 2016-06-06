@@ -36,6 +36,14 @@ public class Ping {
         return selfAdr;
     }
 
+     public void decreaseTTL(){
+         this.TTL--;
+     }
+     
+    public boolean shouldFlood(){
+         return this.TTL > 1;
+     }
+     
     public int getTTL() {
         return TTL;
     }
