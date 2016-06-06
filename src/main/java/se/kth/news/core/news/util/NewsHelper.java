@@ -23,6 +23,8 @@ public class NewsHelper {
 
     public static int nbrOfNews;
     public static ArrayList<String> doneNodes = new ArrayList<String>();
+    public static ArrayList<String> nodescoverage = new ArrayList<String>();
+
 
     public static int getNbrOfNews() {
         return nbrOfNews;
