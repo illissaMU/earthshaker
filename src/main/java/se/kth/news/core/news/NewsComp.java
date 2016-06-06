@@ -58,7 +58,7 @@ import se.kth.news.core.news.util.NewsHelper;
 public class NewsComp extends ComponentDefinition {
 
     private static final Logger LOG = LoggerFactory.getLogger(NewsComp.class);
-    private static final int DEFAULT_TTL = 1;
+    private static final int DEFAULT_TTL = 3;
     private static final int NETWORK_SIZE = ScenarioGen.NETWORK_SIZE;//number of nodes
     private String logPrefix = " ";
     private ArrayList<String> doneNodes = new ArrayList<String>();
@@ -102,7 +102,6 @@ public class NewsComp extends ComponentDefinition {
 
     private void updateLocalNewsView() {
         localNewsView = new NewsView(selfAdr.getId(), 0);
-         NewsHelper.addDoneNodes(selfAdr.getId().toString());
         //LOG.debug("{}informing overlays of new view", logPrefix);
         trigger(new OverlayViewUpdate.Indication<>(gradientOId, false, localNewsView.copy()), viewUpdatePort);
     }
@@ -117,14 +116,18 @@ public class NewsComp extends ComponentDefinition {
                 for (String str : NewsHelper.getDoneNodes()) {
                     System.out.println("node id:" + str);
                 }
-                System.out.println("!!!" + (double) (100 * NewsHelper.getDoneNodes().size() / NETWORK_SIZE) + "%");
-                //System.out.println("Done nodes~~~~");
+               //System.out.println("!!!" + (double) (100 * NewsHelper.getDoneNodes().size() / NETWORK_SIZE) + "%");
+                if( NewsHelper.getDoneNodes().size()==NETWORK_SIZE){
+                System.exit(0);
+                }
+               //System.out.println("Done nodes~~~~Node:" + selfAdr.getId().toString());
                 return;
             }
-
-            for (String str : NewsHelper.getDoneNodes()) {
-                System.out.println("str: " + str);
-            }
+           
+            NewsHelper.addDoneNodes(selfAdr.getId().toString());
+            //for (String str : NewsHelper.getDoneNodes()) {
+            //   System.out.println("str: " + str);
+            //}
 
             Iterator<Identifier> it = castSample.publicSample.keySet().iterator();
             while (it.hasNext()) {
@@ -132,11 +135,12 @@ public class NewsComp extends ComponentDefinition {
                 KHeader header = new BasicHeader(selfAdr, partner, Transport.UDP);
                 KContentMsg msg = new BasicContentMsg(header, new Ping(selfAdr, DEFAULT_TTL));
                 trigger(msg, networkPort);
-               
-                NewsHelper.increaseNbrOfNews();
+                
 
                 // System.out.println("!!!" + (double) (100 * NewsHelper.getDoneNodes().size() / NETWORK_SIZE) + "%");
-            }
+            } 
+            System.out.println("Done nodes~~~~Node:" + selfAdr.getId().toString());
+             NewsHelper.increaseNbrOfNews();
         }
     };
 
