@@ -19,6 +19,7 @@ package se.kth.news.core.news;
 
 import java.util.Iterator;
 import java.util.Map;
+import java.util.ArrayList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import se.kth.news.core.leader.LeaderSelectPort;
@@ -54,8 +55,9 @@ import se.sics.ktoolbox.util.overlays.view.OverlayViewUpdatePort;
 public class NewsComp extends ComponentDefinition {
 
     private static final Logger LOG = LoggerFactory.getLogger(NewsComp.class);
-    private static final int DEFAULT_TTL = 10;
+    private static final int DEFAULT_TTL = 3;
     private String logPrefix = " ";
+    private  ArrayList<String> donenodes = new ArrayList<String>();
 
     //*******************************CONNECTIONS********************************
     Positive<Timer> timerPort = requires(Timer.class);
@@ -104,14 +106,18 @@ public class NewsComp extends ComponentDefinition {
         @Override
         public void handle(CroupierSample<NewsView> castSample) {
             myCroupierSample = castSample;
-            if (castSample.publicSample.isEmpty()) {
+            if (castSample.publicSample.isEmpty()|| donenodes.contains(selfAdr.getId().toString())) {
+                System.out.println("Done nodes");
                 return;
             }
+            donenodes.add(selfAdr.getId().toString());
             Iterator<Identifier> it = castSample.publicSample.keySet().iterator();
+            while ( it.hasNext()) {
             KAddress partner = castSample.publicSample.get(it.next()).getSource();
             KHeader header = new BasicHeader(selfAdr, partner, Transport.UDP);
             KContentMsg msg = new BasicContentMsg(header, new Ping(selfAdr, DEFAULT_TTL));
             trigger(msg, networkPort);
+            }
         }
     };
 
@@ -132,20 +138,26 @@ public class NewsComp extends ComponentDefinition {
 
         @Override
         public void handle(Ping content, KContentMsg<?, ?, Ping> container) {
-            content.setTTL(content.getTTL() - 1);
             System.out.println("TTL: " + content.getTTL());
+            LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
+            if( content.shouldFlood()){
+            content.decreaseTTL();
+            //System.out.println("TTL: " + content.getTTL());
 
             Iterator<Identifier> it = myCroupierSample.publicSample.keySet().iterator();
 
-            if (content.getTTL() > 0 && it.hasNext()) {
+            while ( it.hasNext()) {
+                
                 KAddress partner = myCroupierSample.publicSample.get(it.next()).getSource();
+                if (!partner.equals(container.getHeader().getSource())) {
                 KHeader header = new BasicHeader(selfAdr, partner, Transport.UDP);
                 KContentMsg msg = new BasicContentMsg(header, content);
                 trigger(msg, networkPort);
+                }
+                }
             }
-
-            LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
-            trigger(container.answer(new Pong()), networkPort);
+            //LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
+            //trigger(container.answer(new Pong()), networkPort);
         }
     };
 
