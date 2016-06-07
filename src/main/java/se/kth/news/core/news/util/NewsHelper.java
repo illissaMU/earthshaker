@@ -23,6 +23,8 @@ import se.sics.ktoolbox.util.identifiable.Identifier;
 public class NewsHelper {
 
     public static int totalOfNews;
+    public static int roundsOfLeaderSelection;
+    public static int newsOfLeaderSelection;
     public static ArrayList<String> doneNodes = new ArrayList<String>();
     public static ArrayList<String> newsCoverage = new ArrayList<String>();
     public static Map<Identifier, Integer> nodeKnowledge = new HashMap<>();//for each node (defined by id), stores how many news it has received
@@ -43,5 +45,21 @@ public class NewsHelper {
         if (!doneNodes.contains(doneNodesId)) {
             doneNodes.add(doneNodesId);
         }
+    }
+
+    public static void increaseRoundsOfLeaderSelection() {
+        roundsOfLeaderSelection++;
+    }
+
+    public static int getRoundsOfLeaderSelection() {
+        return roundsOfLeaderSelection;
+    }
+    
+     public static void increaseNewsOfLeaderSelection() {
+        newsOfLeaderSelection++;
+    }
+
+    public static int getNewsOfLeaderSelection() {
+        return newsOfLeaderSelection;
     }
 }

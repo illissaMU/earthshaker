@@ -29,4 +29,5 @@ public class LeaderUpdate implements KompicsEvent {
     public LeaderUpdate(KAddress leaderAdr) {
         this.leaderAdr = leaderAdr;
     }
+    
 }

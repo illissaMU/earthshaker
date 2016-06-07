@@ -58,7 +58,7 @@ import se.kth.news.core.news.util.NewsHelper;
 public class NewsComp extends ComponentDefinition {
 
     private static final Logger LOG = LoggerFactory.getLogger(NewsComp.class);
-    private static final int DEFAULT_TTL = 15;
+    private static final int DEFAULT_TTL = 10;
     private static final int NETWORK_SIZE = ScenarioGen.NETWORK_SIZE;//number of nodes
     private String logPrefix = " ";
 

@@ -20,6 +20,7 @@ package se.kth.news.core.leader;
 import java.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import se.kth.news.core.news.util.NewsHelper;
 import se.kth.news.core.news.util.NewsView;
 import se.kth.news.core.news.util.NewsViewComparator;
 import se.sics.kompics.ComponentDefinition;
@@ -81,27 +82,29 @@ public class LeaderSelectComp extends ComponentDefinition {
             neighbors = sample.getGradientNeighbours();
             fingers = sample.getGradientFingers();
             selfView = (NewsView) sample.selfView;
-            
+
             for (Container<KAddress, NewsView> finger : fingers) {
-            if (viewComparator.compare(selfView, finger.getContent()) >= 0) {
-                System.out.println("Node "+selfView.nodeId+" is the leader");
-             }
-            else{
-                System.out.println("ops... "+finger.getContent()+" is the leader");
+                if (viewComparator.compare(selfView, finger.getContent()) >= 0) {
+                    System.out.println("Node " + selfView.nodeId + " is the leader");
+                } else {
+                    System.out.println("ops... " + finger.getContent() + " is the leader");
+                }
+                NewsHelper.increaseNewsOfLeaderSelection();
             }
-            }
-         
-           trigger(new LeaderUpdate(selfAdr), leaderUpdate);
+            NewsHelper.increaseRoundsOfLeaderSelection();
+            System.out.println("Rounds of leader selection: " + NewsHelper.getRoundsOfLeaderSelection());
+            System.out.println("Nbr. of News in leader selection: "+NewsHelper.getNewsOfLeaderSelection());
+            trigger(new LeaderUpdate(selfAdr), leaderUpdate);
             LOG.debug("{}neighbours:{}", logPrefix, sample.gradientNeighbours);
             LOG.debug("{}fingers:{}", logPrefix, sample.gradientFingers);
             LOG.debug("{}local view:{}", logPrefix, sample.selfView);
         }
     };
 
-    Handler handleLeader = new Handler<LeaderUpdate>() {
+     Handler handleLeader = new Handler<LeaderUpdate>() {
           @Override
           public void handle(LeaderUpdate event) {
-                 System.out.println("triggering leader update...");
+              System.out.println("triggered!");
              LOG.info("{}New leader:{}", logPrefix, event.leaderAdr.getId());
          }
      };
