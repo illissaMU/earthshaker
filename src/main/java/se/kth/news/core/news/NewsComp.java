@@ -58,7 +58,7 @@ import se.kth.news.core.news.util.NewsHelper;
 public class NewsComp extends ComponentDefinition {
 
     private static final Logger LOG = LoggerFactory.getLogger(NewsComp.class);
-    private static final int DEFAULT_TTL = 5;
+    private static final int DEFAULT_TTL = 15;
     private static final int NETWORK_SIZE = ScenarioGen.NETWORK_SIZE;//number of nodes
     private String logPrefix = " ";
 
@@ -175,9 +175,10 @@ public class NewsComp extends ComponentDefinition {
                 //Map.Entry mEntry = (Map.Entry) iter.next();
                 System.out.println(mEntry.getKey() + " : " + mEntry.getValue());
                 //sumOfNews += (int) mEntry.getValue();
-                System.out.println("Node " + mEntry.getKey() + " has seen " + (10000 * (((int) mEntry.getValue())) / sumOfNews) + "‱ of news");
+                System.out.println("Node " + mEntry.getKey() + " has seen " + (100 * (double)(((int) mEntry.getValue())) / sumOfNews) + "% of news");
             }
             System.out.println("sum:" + sumOfNews);
+            
             LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
 
             if (content.getTTL() > 1) {

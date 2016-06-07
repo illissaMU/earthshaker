@@ -38,7 +38,7 @@ import se.sics.ktoolbox.util.overlays.id.OverlayIdRegistry;
  */
 public class ScenarioGen {
 
-    public static final int NETWORK_SIZE = 100;//number of nodes in the network
+    public static final int NETWORK_SIZE = 15;//number of nodes in the network
 
     static Operation<SetupEvent> systemSetupOp = new Operation<SetupEvent>() {
         @Override
