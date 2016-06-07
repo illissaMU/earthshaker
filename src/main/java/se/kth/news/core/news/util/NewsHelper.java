@@ -54,8 +54,8 @@ public class NewsHelper {
     public static int getRoundsOfLeaderSelection() {
         return roundsOfLeaderSelection;
     }
-    
-     public static void increaseNewsOfLeaderSelection() {
+
+    public static void increaseNewsOfLeaderSelection() {
         newsOfLeaderSelection++;
     }
 

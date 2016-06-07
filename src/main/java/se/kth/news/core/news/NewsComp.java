@@ -146,6 +146,7 @@ public class NewsComp extends ComponentDefinition {
     Handler handleLeader = new Handler<LeaderUpdate>() {
         @Override
         public void handle(LeaderUpdate event) {
+            LOG.info("{}New leader:{}", logPrefix, event.leaderAdr.getId());
         }
     };
     int sumOfNews = 0;
@@ -165,22 +166,21 @@ public class NewsComp extends ComponentDefinition {
 
             Iterator iter1 = NewsHelper.nodeKnowledge.entrySet().iterator();
             int sumOfNews = 0;
-            while(iter1.hasNext()){
+            while (iter1.hasNext()) {
                 Map.Entry mEntry = (Map.Entry) iter1.next();
                 sumOfNews += (int) mEntry.getValue();
             }
             Iterator iter2 = NewsHelper.nodeKnowledge.entrySet().iterator();
             while (iter2.hasNext()) {
-                Map.Entry mEntry = (Map.Entry) iter2.next();                
+                Map.Entry mEntry = (Map.Entry) iter2.next();
                 //Map.Entry mEntry = (Map.Entry) iter.next();
                 //System.out.println(mEntry.getKey() + " : " + mEntry.getValue());
                 //sumOfNews += (int) mEntry.getValue();
                 //System.out.println("Node " + mEntry.getKey() + " has seen " + (100 * (double)(((int) mEntry.getValue())) / sumOfNews) + "% of news");
             }
             //System.out.println("sum:" + sumOfNews);
-            
-            //LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
 
+            //LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
             if (content.getTTL() > 1) {
                 content.decreaseTTL();
 

@@ -85,30 +85,27 @@ public class LeaderSelectComp extends ComponentDefinition {
 
             for (Container<KAddress, NewsView> finger : fingers) {
                 if (viewComparator.compare(selfView, finger.getContent()) >= 0) {
-                    System.out.println("Node " + selfView.nodeId + " is the leader");
-                } else {
-                    System.out.println("ops... " + finger.getContent() + " is the leader");
+                    trigger(new LeaderUpdate(selfAdr), leaderUpdate);
                 }
                 NewsHelper.increaseNewsOfLeaderSelection();
             }
             NewsHelper.increaseRoundsOfLeaderSelection();
             System.out.println("Rounds of leader selection: " + NewsHelper.getRoundsOfLeaderSelection());
-            System.out.println("Nbr. of News in leader selection: "+NewsHelper.getNewsOfLeaderSelection());
-            trigger(new LeaderUpdate(selfAdr), leaderUpdate);
+            System.out.println("Nbr. of News in leader selection: " + NewsHelper.getNewsOfLeaderSelection());
+
             LOG.debug("{}neighbours:{}", logPrefix, sample.gradientNeighbours);
             LOG.debug("{}fingers:{}", logPrefix, sample.gradientFingers);
             LOG.debug("{}local view:{}", logPrefix, sample.selfView);
         }
     };
 
-     Handler handleLeader = new Handler<LeaderUpdate>() {
-          @Override
-          public void handle(LeaderUpdate event) {
-              System.out.println("triggered!");
-             LOG.info("{}New leader:{}", logPrefix, event.leaderAdr.getId());
-         }
-     };
-    
+    Handler handleLeader = new Handler<LeaderUpdate>() {
+        @Override
+        public void handle(LeaderUpdate event) {
+            LOG.info("{}New leader:{}", logPrefix, event.leaderAdr.getId());
+        }
+    };
+
     public static class Init extends se.sics.kompics.Init<LeaderSelectComp> {
 
         public final KAddress selfAdr;
