@@ -17,9 +17,11 @@
  */
 package se.kth.news.core.leader;
 
-import java.util.Comparator;
+import java.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import se.kth.news.core.news.util.NewsView;
+import se.kth.news.core.news.util.NewsViewComparator;
 import se.sics.kompics.ComponentDefinition;
 import se.sics.kompics.Handler;
 import se.sics.kompics.Negative;
@@ -30,6 +32,7 @@ import se.sics.kompics.timer.Timer;
 import se.sics.ktoolbox.gradient.GradientPort;
 import se.sics.ktoolbox.gradient.event.TGradientSample;
 import se.sics.ktoolbox.util.network.KAddress;
+import se.sics.ktoolbox.util.other.Container;
 
 /**
  * @author Alex Ormenisan <aaor@kth.se>
@@ -48,13 +51,17 @@ public class LeaderSelectComp extends ComponentDefinition {
     private KAddress selfAdr;
     //*******************************INTERNAL_STATE*****************************
     private Comparator viewComparator;
+    private List<Container<KAddress, NewsView>> neighbors;
+    private List<Container<KAddress, NewsView>> fingers;
+    private int sequenceNumber = 0;
+    private NewsView selfView;
 
     public LeaderSelectComp(Init init) {
         selfAdr = init.selfAdr;
         logPrefix = "<nid:" + selfAdr.getId() + ">";
         LOG.info("{}initiating...", logPrefix);
-        
-        viewComparator = viewComparator;
+
+        viewComparator = new NewsViewComparator();
 
         subscribe(handleStart, control);
         subscribe(handleGradientSample, gradientPort);
@@ -66,16 +73,39 @@ public class LeaderSelectComp extends ComponentDefinition {
             LOG.info("{}starting...", logPrefix);
         }
     };
-    
+
     Handler handleGradientSample = new Handler<TGradientSample>() {
         @Override
         public void handle(TGradientSample sample) {
+            //TODO
+            neighbors = sample.getGradientNeighbours();
+            fingers = sample.getGradientFingers();
+            selfView = (NewsView) sample.selfView;
+            
+            for (Container<KAddress, NewsView> finger : fingers) {
+            if (viewComparator.compare(selfView, finger.getContent()) >= 0) {
+                System.out.println("Node "+selfView.nodeId+" is the leader");
+             }
+            else{
+                System.out.println("ops... "+finger.getContent()+" is the leader");
+            }
+            }
+         
+           trigger(new LeaderUpdate(selfAdr), leaderUpdate);
             LOG.debug("{}neighbours:{}", logPrefix, sample.gradientNeighbours);
             LOG.debug("{}fingers:{}", logPrefix, sample.gradientFingers);
             LOG.debug("{}local view:{}", logPrefix, sample.selfView);
         }
     };
 
+    Handler handleLeader = new Handler<LeaderUpdate>() {
+          @Override
+          public void handle(LeaderUpdate event) {
+                 System.out.println("triggering leader update...");
+             LOG.info("{}New leader:{}", logPrefix, event.leaderAdr.getId());
+         }
+     };
+    
     public static class Init extends se.sics.kompics.Init<LeaderSelectComp> {
 
         public final KAddress selfAdr;

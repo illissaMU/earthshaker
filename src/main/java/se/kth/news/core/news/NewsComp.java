@@ -110,7 +110,7 @@ public class NewsComp extends ComponentDefinition {
         public void handle(CroupierSample<NewsView> castSample) {
             myCroupierSample = castSample;
             if (NewsHelper.newsCoverage.size() != 0) {
-                System.out.println("*** " + (double) (100 * (NewsHelper.newsCoverage.size() - 1) / NETWORK_SIZE) + "%");
+                //System.out.println("*** " + (double) (100 * (NewsHelper.newsCoverage.size() - 1) / NETWORK_SIZE) + "%");
             }
             if (castSample.publicSample.isEmpty() || (NewsHelper.getDoneNodes().contains(selfAdr.getId().toString()))) {
                 if (NewsHelper.getDoneNodes().size() == NETWORK_SIZE) {
@@ -173,13 +173,13 @@ public class NewsComp extends ComponentDefinition {
             while (iter2.hasNext()) {
                 Map.Entry mEntry = (Map.Entry) iter2.next();                
                 //Map.Entry mEntry = (Map.Entry) iter.next();
-                System.out.println(mEntry.getKey() + " : " + mEntry.getValue());
+                //System.out.println(mEntry.getKey() + " : " + mEntry.getValue());
                 //sumOfNews += (int) mEntry.getValue();
-                System.out.println("Node " + mEntry.getKey() + " has seen " + (100 * (double)(((int) mEntry.getValue())) / sumOfNews) + "% of news");
+                //System.out.println("Node " + mEntry.getKey() + " has seen " + (100 * (double)(((int) mEntry.getValue())) / sumOfNews) + "% of news");
             }
-            System.out.println("sum:" + sumOfNews);
+            //System.out.println("sum:" + sumOfNews);
             
-            LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
+            //LOG.info("{}received ping from:{}", logPrefix, container.getHeader().getSource());
 
             if (content.getTTL() > 1) {
                 content.decreaseTTL();
