@@ -130,6 +130,7 @@ public class NewsComp extends ComponentDefinition {
                 KContentMsg msg = new BasicContentMsg(header, new Ping(selfAdr, DEFAULT_TTL));
                 trigger(msg, networkPort);
                 localNewsView.increaseLocalNewsViewCount();
+
             }
             //System.out.println("node " + localNewsView.getNodeId() + " has sent " + localNewsView.getLocalNewsViewCount() + " news");
             NewsHelper.increaseTotalOfNews();
